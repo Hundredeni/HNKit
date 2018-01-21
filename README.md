@@ -3,7 +3,7 @@ A framework with various reusable iOS components.
 
 ## Installation (Cartage)
 
-0. Create a Cartfile to your project (skip if the project already has a Cartfile)
+0. Add a Cartfile to your project (skip if you already have a Cartfile)
 ```
 touch Cartfile
 ```
