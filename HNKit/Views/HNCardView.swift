@@ -18,7 +18,7 @@ open class HNCardView: UIView {
      * Setting the value to nil results in a transparent card.
      * The default value is UIColor.white.
      */
-    @IBInspectable var cardColor: UIColor? = UIColor.white {
+    @IBInspectable open var cardColor: UIColor? = UIColor.white {
         didSet {
             setNeedsDisplay()
         }
@@ -29,7 +29,7 @@ open class HNCardView: UIView {
      *
      * The default value is 12.
      */
-    @IBInspectable var cardCornerRadius: CGFloat = 12 {
+    @IBInspectable open var cardCornerRadius: CGFloat = 12 {
         didSet {
             setNeedsDisplay()
         }
@@ -41,7 +41,7 @@ open class HNCardView: UIView {
      * Setting the value to nil results in a transparent shadow.
      * The default value is UIColor(white: 0.7, alpha: 0.5).
      */
-    @IBInspectable var shadowColor: UIColor? = UIColor(white: 0.7, alpha: 0.5) {
+    @IBInspectable open var shadowColor: UIColor? = UIColor(white: 0.7, alpha: 0.5) {
         didSet {
             setNeedsDisplay()
         }
@@ -53,7 +53,7 @@ open class HNCardView: UIView {
      * Increasing the value increases the size and feathering
      * of the shadow. The default value is 6.
      */
-    @IBInspectable var shadowBlurRadius: CGFloat = 6 {
+    @IBInspectable open var shadowBlurRadius: CGFloat = 6 {
         didSet {
             setNeedsDisplay()
         }
@@ -65,7 +65,7 @@ open class HNCardView: UIView {
      * Increasing the value shifts the shadow from left
      * to right. The default value is 0.
      */
-    @IBInspectable var shadowHorizontalOffset: CGFloat = 0 {
+    @IBInspectable open var shadowHorizontalOffset: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
@@ -77,7 +77,7 @@ open class HNCardView: UIView {
      * Increasing the value shifts the shadow downwards.
      * The default value is 2.
      */
-    @IBInspectable var shadowVerticalOffset: CGFloat = 2 {
+    @IBInspectable open var shadowVerticalOffset: CGFloat = 2 {
         didSet {
             setNeedsDisplay()
         }

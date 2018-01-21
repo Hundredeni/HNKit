@@ -17,7 +17,7 @@ open class HNHairlineView: UIView {
      * Setting the value to nil results in a transparent hairline.
      * The default value is UIColor(white: 0.7, alpha: 0.5).
      */
-    @IBInspectable var hairlineColor: UIColor? = UIColor(white: 0.7, alpha: 0.5) {
+    @IBInspectable open var hairlineColor: UIColor? = UIColor(white: 0.7, alpha: 0.5) {
         didSet {
             setNeedsDisplay()
         }
