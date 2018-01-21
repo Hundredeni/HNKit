@@ -3,14 +3,14 @@ A framework with various reusable iOS components.
 
 ## Installation (Cartage)
 
-Add the following line to the projects Cartfile:
+1. Add the following line to the projects Cartfile:
 ```
 github "Hundredeni/HNKit"
 ```
 
-Run the Carthage update command:
+2. Run the Carthage update command:
 ```
 carthage update
 ```
 
-Add the framework from the Carthage/Build as linked library in your Xcode project.
+3. Add the framework (located in the Carthage/Build folder) as a linked library to your Xcode project.
