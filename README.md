@@ -3,7 +3,12 @@ A framework with various reusable iOS components.
 
 ## Installation (Cartage)
 
-1. Add the following line to the projects Cartfile:
+0. Create a Cartfile to your project (skip if the project already has a Cartfile)
+```
+touch Cartfile
+```
+
+1. Add the following line to the Cartfile:
 ```
 github "Hundredeni/HNKit"
 ```
