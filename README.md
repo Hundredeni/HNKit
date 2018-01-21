@@ -18,4 +18,4 @@ github "Hundredeni/HNKit"
 carthage update
 ```
 
-3. Add the framework (located in the Carthage/Build folder) as a linked library to your Xcode project.
+3. Add the framework (located in the Carthage/Build folder) as an embedded binary to your Xcode project.
