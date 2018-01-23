@@ -99,7 +99,6 @@
 			children = (
 				17312CD12017D367001B9BF4 /* Model */,
 				171689142014FBFC009C713C /* Views */,
-				17312CD02017D35E001B9BF4 /* Controllers */,
 				171688FA2014FB77009C713C /* HNKit.h */,
 				171688FB2014FB77009C713C /* Info.plist */,
 			);
@@ -127,17 +126,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		17312CD02017D35E001B9BF4 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		17312CD12017D367001B9BF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */,
 				17312CD62017D380001B9BF4 /* HNTableViewItem.swift */,
 				17312CE82017EBCD001B9BF4 /* HNTableViewItemBuilder.swift */,
 				17312CD52017D380001B9BF4 /* HNTableViewSection.swift */,
