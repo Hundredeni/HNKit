@@ -43,6 +43,13 @@ open class HNHairlineView: UIView {
         context.restoreGState()
     }
     
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // redraw the view when bounds change
+        contentMode = .redraw
+    }
+    
     // MARK: - Helpers
     
     private func getColorOrDefault(_ color: UIColor?) -> UIColor {
