@@ -58,6 +58,7 @@ extension HNTableViewDataSource: UITableViewDataSource {
         if let valueDisplayingCell = cell as? ValueDispaying {
             valueDisplayingCell.display(value: item.value)
         }
+        item.configuration?(cell)
         return cell
     }
 }

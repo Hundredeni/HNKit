@@ -11,4 +11,5 @@ import UIKit
 struct HNTableViewItem {
     let type: HNTableViewCell.Type
     let value: Any?
+    let configuration: ((HNTableViewCell) -> Void)?
 }
