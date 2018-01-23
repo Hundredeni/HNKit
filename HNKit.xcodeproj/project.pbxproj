@@ -12,6 +12,16 @@
 		171689082014FB77009C713C /* HNKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171688FA2014FB77009C713C /* HNKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171689162014FC0A009C713C /* HNCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689152014FC0A009C713C /* HNCardView.swift */; };
 		171689182014FD2E009C713C /* HNHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689172014FD2E009C713C /* HNHairlineView.swift */; };
+		17312CD82017D380001B9BF4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD22017D37F001B9BF4 /* NibLoadable.swift */; };
+		17312CD92017D380001B9BF4 /* ValueDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */; };
+		17312CDA2017D380001B9BF4 /* HNTableViewStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */; };
+		17312CDB2017D380001B9BF4 /* HNTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD52017D380001B9BF4 /* HNTableViewSection.swift */; };
+		17312CDC2017D380001B9BF4 /* HNTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD62017D380001B9BF4 /* HNTableViewItem.swift */; };
+		17312CDD2017D380001B9BF4 /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD72017D380001B9BF4 /* NibReusable.swift */; };
+		17312CE12017D38E001B9BF4 /* HNTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CDE2017D38D001B9BF4 /* HNTableViewCell.swift */; };
+		17312CE22017D38E001B9BF4 /* UICollectionView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CDF2017D38D001B9BF4 /* UICollectionView+NibReusable.swift */; };
+		17312CE32017D38E001B9BF4 /* UITableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CE02017D38E001B9BF4 /* UITableView+NibReusable.swift */; };
+		17312CE52017D398001B9BF4 /* HNTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +43,16 @@
 		171689072014FB77009C713C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171689152014FC0A009C713C /* HNCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCardView.swift; sourceTree = "<group>"; };
 		171689172014FD2E009C713C /* HNHairlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNHairlineView.swift; sourceTree = "<group>"; };
+		17312CD22017D37F001B9BF4 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueDisplaying.swift; sourceTree = "<group>"; };
+		17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewStructure.swift; sourceTree = "<group>"; };
+		17312CD52017D380001B9BF4 /* HNTableViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewSection.swift; sourceTree = "<group>"; };
+		17312CD62017D380001B9BF4 /* HNTableViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewItem.swift; sourceTree = "<group>"; };
+		17312CD72017D380001B9BF4 /* NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
+		17312CDE2017D38D001B9BF4 /* HNTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewCell.swift; sourceTree = "<group>"; };
+		17312CDF2017D38D001B9BF4 /* UICollectionView+NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+NibReusable.swift"; sourceTree = "<group>"; };
+		17312CE02017D38E001B9BF4 /* UITableView+NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+NibReusable.swift"; sourceTree = "<group>"; };
+		17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +95,9 @@
 		171688F92014FB77009C713C /* HNKit */ = {
 			isa = PBXGroup;
 			children = (
+				17312CD12017D367001B9BF4 /* Model */,
 				171689142014FBFC009C713C /* Views */,
+				17312CD02017D35E001B9BF4 /* Controllers */,
 				171688FA2014FB77009C713C /* HNKit.h */,
 				171688FB2014FB77009C713C /* Info.plist */,
 			);
@@ -96,8 +118,32 @@
 			children = (
 				171689152014FC0A009C713C /* HNCardView.swift */,
 				171689172014FD2E009C713C /* HNHairlineView.swift */,
+				17312CDE2017D38D001B9BF4 /* HNTableViewCell.swift */,
+				17312CDF2017D38D001B9BF4 /* UICollectionView+NibReusable.swift */,
+				17312CE02017D38E001B9BF4 /* UITableView+NibReusable.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		17312CD02017D35E001B9BF4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		17312CD12017D367001B9BF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17312CD62017D380001B9BF4 /* HNTableViewItem.swift */,
+				17312CD52017D380001B9BF4 /* HNTableViewSection.swift */,
+				17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */,
+				17312CD22017D37F001B9BF4 /* NibLoadable.swift */,
+				17312CD72017D380001B9BF4 /* NibReusable.swift */,
+				17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +257,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17312CDD2017D380001B9BF4 /* NibReusable.swift in Sources */,
+				17312CD82017D380001B9BF4 /* NibLoadable.swift in Sources */,
+				17312CE32017D38E001B9BF4 /* UITableView+NibReusable.swift in Sources */,
+				17312CD92017D380001B9BF4 /* ValueDisplaying.swift in Sources */,
 				171689182014FD2E009C713C /* HNHairlineView.swift in Sources */,
+				17312CDB2017D380001B9BF4 /* HNTableViewSection.swift in Sources */,
+				17312CE52017D398001B9BF4 /* HNTableViewDataSource.swift in Sources */,
 				171689162014FC0A009C713C /* HNCardView.swift in Sources */,
+				17312CDA2017D380001B9BF4 /* HNTableViewStructure.swift in Sources */,
+				17312CE22017D38E001B9BF4 /* UICollectionView+NibReusable.swift in Sources */,
+				17312CDC2017D380001B9BF4 /* HNTableViewItem.swift in Sources */,
+				17312CE12017D38E001B9BF4 /* HNTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
