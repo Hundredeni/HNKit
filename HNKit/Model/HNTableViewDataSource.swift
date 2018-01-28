@@ -23,13 +23,7 @@ open class HNTableViewDataSource: NSObject {
 
 extension HNTableViewDataSource: UITableViewDataSource {
     
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewStructure.sections.count
-    }
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewStructure.sections[section].items.count
-    }
+    // MARK: - Configuring the Table View
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard tableViewStructure.containsItem(at: indexPath) else {
@@ -48,7 +42,29 @@ extension HNTableViewDataSource: UITableViewDataSource {
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return tableViewStructure.sections.count
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewStructure.sections[section].items.count
+    }
+    
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return tableViewStructure.sections[section].headerTitle
+    }
+    
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return tableViewStructure.sections[section].footerTitle
+    }
+    
+    // MARK: - Reordering Table Rows
+    
+    open func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    open func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         tableViewStructure.moveItem(from: sourceIndexPath, to: destinationIndexPath)
     }
 }

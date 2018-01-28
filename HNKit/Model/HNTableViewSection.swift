@@ -11,8 +11,14 @@ import Foundation
 public struct HNTableViewSection {
     
     public var items: [HNTableViewItem]
+    public var headerTitle: String?
+    public var footerTitle: String?
+    public var identifier: String?
     
-    public init(items: [HNTableViewItem] = []) {
+    public init(items: [HNTableViewItem] = [], headerTitle: String? = nil, footerTitle: String? = nil, identifier: String? = nil) {
         self.items = items
+        self.headerTitle = headerTitle
+        self.footerTitle = footerTitle
+        self.identifier = identifier
     }
 }

@@ -10,26 +10,42 @@ import HNKit
 
 class DemoTableViewDataSource: HNTableViewDataSource {
     
-    init(numberOfSections: Int, numberOfRowsPerSection: Int) {
+    init(usingBuilder: Bool) {
+
+        let animals = ["Bird", "Cat", "Dog"]
+        let phones = ["iPhone 7", "iPhone 8", "iPhone X"]
         
-        var sections = [HNTableViewSection]()
+        if usingBuilder {
+            
+            // Demo creating HNTableViewStructure using HNTableViewStructureBuilder
+            
+            let builder = HNTableViewStructureBuilder()
+
+            builder
+                .addSectionUsingBuilder({ sectionBuilder in
+                    sectionBuilder
+                        .set(headerTitle: "Animals")
+                        .addItems(animals.map { HNTableViewItem(type: DemoTableViewCell.self, value: $0) })
+                })
+                .addSectionUsingBuilder({ sectionBuilder in
+                    sectionBuilder
+                        .set(headerTitle: "Phones")
+                        .addItems(phones.map { HNTableViewItem(type: DemoTableViewCell.self, value: $0) })
+                })
+            
+            super.init(tableViewStructure: builder.build())
         
-        for sectionNumber in 0..<numberOfSections {
+        } else {
             
-            var section = HNTableViewSection()
+            // Demo creating HNTableViewStructure without using HNTableViewStructureBuilder
             
-            for rowNumber in 0..<numberOfRowsPerSection {
-                
-                section.items.append(HNTableViewItem(type: DemoTableViewCell.self, value: "Section: \(sectionNumber); Row: \(rowNumber)."))
+            let sectionData = [(title: "Animals", values: animals), (title: "Phones", values: phones)]
+            let sections = sectionData.map {
+                section in HNTableViewSection(items: section.values.map {
+                    item in HNTableViewItem(type: DemoTableViewCell.self, value: item)
+                }, headerTitle: section.title)
             }
-            
-            sections.append(section)
+            super.init(tableViewStructure: HNTableViewStructure(sections: sections))
         }
-        
-        super.init(tableViewStructure: HNTableViewStructure(sections: sections))
-    }
-    
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
 }

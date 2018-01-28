@@ -22,7 +22,7 @@ open class HNTableViewItemBuilder {
         configuration = item.configuration
     }
     
-    public init(type: HNTableViewCell.Type, value: Any? = nil, identifier: String? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
+    public init(type: HNTableViewCell.Type = HNTableViewCell.self, value: Any? = nil, identifier: String? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
         self.type = type
         self.value = value
         self.identifier = identifier
@@ -31,6 +31,12 @@ open class HNTableViewItemBuilder {
     
     open func build() -> HNTableViewItem {
         return HNTableViewItem(type: type, value: value, identifier: identifier, configuration: configuration)
+    }
+    
+    @discardableResult
+    public func set(type: HNTableViewCell.Type) -> HNTableViewItemBuilder {
+        self.type = type
+        return self
     }
     
     @discardableResult

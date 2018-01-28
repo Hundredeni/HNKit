@@ -15,7 +15,7 @@ public struct HNTableViewItem {
     public let identifier: String?
     public let configuration: ((HNTableViewCell) -> Void)?
     
-    public init(type: HNTableViewCell.Type, value: Any? = nil, identifier: String? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
+    public init(type: HNTableViewCell.Type = HNTableViewCell.self, value: Any? = nil, identifier: String? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
         self.type = type
         self.value = value
         self.identifier = identifier
