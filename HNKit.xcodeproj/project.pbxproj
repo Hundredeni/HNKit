@@ -10,7 +10,6 @@
 		1711FA44201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */; };
 		1711FA48201E0AA800F9F1C0 /* MockHNTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */; };
 		1711FA4C201E134900F9F1C0 /* HNTableViewStructureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA4B201E134900F9F1C0 /* HNTableViewStructureBuilder.swift */; };
-		1711FA4E201E151900F9F1C0 /* HNTableViewSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA4D201E151900F9F1C0 /* HNTableViewSectionBuilder.swift */; };
 		171689012014FB77009C713C /* HNKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171688F72014FB77009C713C /* HNKit.framework */; };
 		171689082014FB77009C713C /* HNKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171688FA2014FB77009C713C /* HNKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171689162014FC0A009C713C /* HNCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689152014FC0A009C713C /* HNCardView.swift */; };
@@ -42,7 +41,6 @@
 		1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewItemBuilderTests.swift; sourceTree = "<group>"; };
 		1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHNTableViewCell.swift; sourceTree = "<group>"; };
 		1711FA4B201E134900F9F1C0 /* HNTableViewStructureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewStructureBuilder.swift; sourceTree = "<group>"; };
-		1711FA4D201E151900F9F1C0 /* HNTableViewSectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewSectionBuilder.swift; sourceTree = "<group>"; };
 		171688F72014FB77009C713C /* HNKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HNKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171688FA2014FB77009C713C /* HNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNKit.h; sourceTree = "<group>"; };
 		171688FB2014FB77009C713C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				17312CD62017D380001B9BF4 /* HNTableViewItem.swift */,
 				17312CE82017EBCD001B9BF4 /* HNTableViewItemBuilder.swift */,
 				17312CD52017D380001B9BF4 /* HNTableViewSection.swift */,
-				1711FA4D201E151900F9F1C0 /* HNTableViewSectionBuilder.swift */,
 				17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */,
 				1711FA4B201E134900F9F1C0 /* HNTableViewStructureBuilder.swift */,
 				17312CD22017D37F001B9BF4 /* NibLoadable.swift */,
@@ -288,7 +285,6 @@
 				17312CDA2017D380001B9BF4 /* HNTableViewStructure.swift in Sources */,
 				1711FA4C201E134900F9F1C0 /* HNTableViewStructureBuilder.swift in Sources */,
 				17312CE92017EBCD001B9BF4 /* HNTableViewItemBuilder.swift in Sources */,
-				1711FA4E201E151900F9F1C0 /* HNTableViewSectionBuilder.swift in Sources */,
 				17312CE22017D38E001B9BF4 /* UICollectionView+NibReusable.swift in Sources */,
 				17312CDC2017D380001B9BF4 /* HNTableViewItem.swift in Sources */,
 				17312CE12017D38E001B9BF4 /* HNTableViewCell.swift in Sources */,

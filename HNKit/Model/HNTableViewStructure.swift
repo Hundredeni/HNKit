@@ -21,7 +21,6 @@ struct HNTableViewStructure {
         }
     }
     
-    
     func containsItem(at indexPath: IndexPath) -> Bool {
         guard
             indexPath.section < sections.count,
@@ -30,6 +29,14 @@ struct HNTableViewStructure {
             return false
         }
         return true
+    }
+    
+    mutating func insert(_ newItem: HNTableViewItem, at indexPath: IndexPath) {
+        sections[indexPath.section].items.insert(newItem, at: indexPath.row)
+    }
+    
+    mutating func remove(at indexPath: IndexPath) -> HNTableViewItem {
+        return sections[indexPath.section].items.remove(at: indexPath.row)
     }
     
     var isEmpty: Bool {
