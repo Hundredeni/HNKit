@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1711FA44201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */; };
+		1711FA48201E0AA800F9F1C0 /* MockHNTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */; };
+		1711FA4C201E134900F9F1C0 /* HNTableViewStructureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA4B201E134900F9F1C0 /* HNTableViewStructureBuilder.swift */; };
+		1711FA4E201E151900F9F1C0 /* HNTableViewSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA4D201E151900F9F1C0 /* HNTableViewSectionBuilder.swift */; };
 		171689012014FB77009C713C /* HNKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171688F72014FB77009C713C /* HNKit.framework */; };
-		171689062014FB77009C713C /* HNKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689052014FB77009C713C /* HNKitTests.swift */; };
 		171689082014FB77009C713C /* HNKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171688FA2014FB77009C713C /* HNKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171689162014FC0A009C713C /* HNCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689152014FC0A009C713C /* HNCardView.swift */; };
 		171689182014FD2E009C713C /* HNHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689172014FD2E009C713C /* HNHairlineView.swift */; };
@@ -36,11 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewItemBuilderTests.swift; sourceTree = "<group>"; };
+		1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHNTableViewCell.swift; sourceTree = "<group>"; };
+		1711FA4B201E134900F9F1C0 /* HNTableViewStructureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewStructureBuilder.swift; sourceTree = "<group>"; };
+		1711FA4D201E151900F9F1C0 /* HNTableViewSectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewSectionBuilder.swift; sourceTree = "<group>"; };
 		171688F72014FB77009C713C /* HNKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HNKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171688FA2014FB77009C713C /* HNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNKit.h; sourceTree = "<group>"; };
 		171688FB2014FB77009C713C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171689002014FB77009C713C /* HNKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		171689052014FB77009C713C /* HNKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNKitTests.swift; sourceTree = "<group>"; };
 		171689072014FB77009C713C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171689152014FC0A009C713C /* HNCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCardView.swift; sourceTree = "<group>"; };
 		171689172014FD2E009C713C /* HNHairlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNHairlineView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1711FA45201E0A9000F9F1C0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		1711FA46201E0A9800F9F1C0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		171688ED2014FB77009C713C = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +130,8 @@
 		171689042014FB77009C713C /* HNKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				171689052014FB77009C713C /* HNKitTests.swift */,
+				1711FA46201E0A9800F9F1C0 /* Mocks */,
+				1711FA45201E0A9000F9F1C0 /* Tests */,
 				171689072014FB77009C713C /* Info.plist */,
 			);
 			path = HNKitTests;
@@ -133,7 +156,9 @@
 				17312CD62017D380001B9BF4 /* HNTableViewItem.swift */,
 				17312CE82017EBCD001B9BF4 /* HNTableViewItemBuilder.swift */,
 				17312CD52017D380001B9BF4 /* HNTableViewSection.swift */,
+				1711FA4D201E151900F9F1C0 /* HNTableViewSectionBuilder.swift */,
 				17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */,
+				1711FA4B201E134900F9F1C0 /* HNTableViewStructureBuilder.swift */,
 				17312CD22017D37F001B9BF4 /* NibLoadable.swift */,
 				17312CD72017D380001B9BF4 /* NibReusable.swift */,
 				17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */,
@@ -261,7 +286,9 @@
 				17312CE52017D398001B9BF4 /* HNTableViewDataSource.swift in Sources */,
 				171689162014FC0A009C713C /* HNCardView.swift in Sources */,
 				17312CDA2017D380001B9BF4 /* HNTableViewStructure.swift in Sources */,
+				1711FA4C201E134900F9F1C0 /* HNTableViewStructureBuilder.swift in Sources */,
 				17312CE92017EBCD001B9BF4 /* HNTableViewItemBuilder.swift in Sources */,
+				1711FA4E201E151900F9F1C0 /* HNTableViewSectionBuilder.swift in Sources */,
 				17312CE22017D38E001B9BF4 /* UICollectionView+NibReusable.swift in Sources */,
 				17312CDC2017D380001B9BF4 /* HNTableViewItem.swift in Sources */,
 				17312CE12017D38E001B9BF4 /* HNTableViewCell.swift in Sources */,
@@ -272,7 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				171689062014FB77009C713C /* HNKitTests.swift in Sources */,
+				1711FA44201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift in Sources */,
+				1711FA48201E0AA800F9F1C0 /* MockHNTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,12 @@ class HNTableViewItemBuilder {
     fileprivate var value: Any?
     fileprivate var configuration: ((HNTableViewCell) -> Void)?
     
+    init(item: HNTableViewItem) {
+        type = item.type
+        value = item.value
+        configuration = item.configuration
+    }
+    
     init(type: HNTableViewCell.Type, value: Any? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
         self.type = type
         self.value = value
@@ -24,16 +30,19 @@ class HNTableViewItemBuilder {
         return HNTableViewItem(type: type, value: value, configuration: configuration)
     }
     
+    @discardableResult
     func set(value: Any?) -> HNTableViewItemBuilder {
         self.value = value
         return self
     }
     
+    @discardableResult
     func set(configuration: ((HNTableViewCell) -> Void)?) -> HNTableViewItemBuilder {
         self.configuration = configuration
         return self
     }
     
+    @discardableResult
     func set(accessoryType: UITableViewCellAccessoryType) -> HNTableViewItemBuilder {
         updateOrSetConfiguration { tableViewCell in
             tableViewCell.accessoryType = accessoryType

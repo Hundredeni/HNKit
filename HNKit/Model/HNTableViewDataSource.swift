@@ -21,12 +21,11 @@ class HNTableViewDataSource: NSObject {
     func tableViewItem(at indexPath: IndexPath) -> HNTableViewItem? {
         guard
             let tableViewStructure = tableViewStructure,
-            indexPath.section < tableViewStructure.count,
-            indexPath.row < tableViewStructure[indexPath.section].items.count
+            tableViewStructure.containsItem(at: indexPath)
         else {
             return nil
         }
-        return tableViewStructure[indexPath.section].items[indexPath.row]
+        return tableViewStructure[indexPath]
     }
 }
 
@@ -38,14 +37,14 @@ extension HNTableViewDataSource: UITableViewDataSource {
         guard let tableViewStructure = tableViewStructure else {
             return 0
         }
-        return tableViewStructure.count
+        return tableViewStructure.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let tableViewStructure = tableViewStructure else {
             return 0
         }
-        return tableViewStructure[section].items.count
+        return tableViewStructure.sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

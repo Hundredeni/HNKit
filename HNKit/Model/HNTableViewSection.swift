@@ -9,5 +9,5 @@
 import Foundation
 
 struct HNTableViewSection {
-    let items: [HNTableViewItem]
+    var items: [HNTableViewItem]
 }
