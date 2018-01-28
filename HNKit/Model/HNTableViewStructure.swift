@@ -35,6 +35,10 @@ struct HNTableViewStructure {
         sections[indexPath.section].items.insert(newItem, at: indexPath.row)
     }
     
+    mutating func insert(contentsOf newItems: [HNTableViewItem], at indexPath: IndexPath) {
+        sections[indexPath.section].items.insert(contentsOf: newItems, at: indexPath.row)
+    }
+    
     mutating func remove(at indexPath: IndexPath) -> HNTableViewItem {
         return sections[indexPath.section].items.remove(at: indexPath.row)
     }
