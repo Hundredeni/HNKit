@@ -1,5 +1,5 @@
 //
-//  NibLoadable.swift
+//  HNNibLoadable.swift
 //  HNKit
 //
 //  Created by Lasse Hammer Priebe on 23/01/2018.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol NibLoadable {
+protocol HNNibLoadable {
     static var nibName: String { get }
     static var nib: UINib { get }
 }
 
-extension NibLoadable {
+extension HNNibLoadable {
     
     static var nibName: String {
         return String(describing: self)
@@ -24,7 +24,7 @@ extension NibLoadable {
     }
 }
 
-extension NibLoadable where Self: UIView {
+extension HNNibLoadable where Self: UIView {
     
     static func fromNib() -> Self {
         return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)![0] as! Self

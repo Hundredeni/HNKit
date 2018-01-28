@@ -12,6 +12,10 @@ struct HNTableViewStructure {
     
     var sections: [HNTableViewSection]
     
+    init(sections: [HNTableViewSection] = []) {
+        self.sections = sections
+    }
+    
     subscript(_ indexPath: IndexPath) -> HNTableViewItem {
         get {
             return sections[indexPath.section].items[indexPath.row]
@@ -19,16 +23,6 @@ struct HNTableViewStructure {
         set {
             sections[indexPath.section].items[indexPath.row] = newValue
         }
-    }
-    
-    func containsItem(at indexPath: IndexPath) -> Bool {
-        guard
-            indexPath.section < sections.count,
-            indexPath.row < sections[indexPath.section].items.count
-        else {
-            return false
-        }
-        return true
     }
     
     mutating func insert(_ newItem: HNTableViewItem, at indexPath: IndexPath) {
@@ -43,7 +37,18 @@ struct HNTableViewStructure {
         return sections[indexPath.section].items.remove(at: indexPath.row)
     }
     
-    var isEmpty: Bool {
-        return sections.isEmpty
+    mutating func moveItem(from previousIndexPath: IndexPath, to newIndexPath: IndexPath) {
+        let item = remove(at: previousIndexPath)
+        insert(item, at: newIndexPath)
+    }
+    
+    func containsItem(at indexPath: IndexPath) -> Bool {
+        guard
+            indexPath.section < sections.count,
+            indexPath.row < sections[indexPath.section].items.count
+            else {
+                return false
+        }
+        return true
     }
 }

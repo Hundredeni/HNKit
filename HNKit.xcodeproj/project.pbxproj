@@ -9,19 +9,24 @@
 /* Begin PBXBuildFile section */
 		1711FA44201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */; };
 		1711FA48201E0AA800F9F1C0 /* MockHNTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */; };
+		1711FA57201E1B6700F9F1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA56201E1B6700F9F1C0 /* AppDelegate.swift */; };
+		1711FA59201E1B6700F9F1C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711FA58201E1B6700F9F1C0 /* ViewController.swift */; };
+		1711FA5C201E1B6700F9F1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1711FA5A201E1B6700F9F1C0 /* Main.storyboard */; };
+		1711FA5E201E1B6700F9F1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1711FA5D201E1B6700F9F1C0 /* Assets.xcassets */; };
+		1711FA61201E1B6700F9F1C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1711FA5F201E1B6700F9F1C0 /* LaunchScreen.storyboard */; };
 		171689012014FB77009C713C /* HNKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171688F72014FB77009C713C /* HNKit.framework */; };
 		171689082014FB77009C713C /* HNKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171688FA2014FB77009C713C /* HNKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171689162014FC0A009C713C /* HNCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689152014FC0A009C713C /* HNCardView.swift */; };
 		171689182014FD2E009C713C /* HNHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171689172014FD2E009C713C /* HNHairlineView.swift */; };
-		17312CD82017D380001B9BF4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD22017D37F001B9BF4 /* NibLoadable.swift */; };
-		17312CD92017D380001B9BF4 /* ValueDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */; };
+		17312CD82017D380001B9BF4 /* HNNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD22017D37F001B9BF4 /* HNNibLoadable.swift */; };
+		17312CD92017D380001B9BF4 /* HNValueDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD32017D37F001B9BF4 /* HNValueDisplaying.swift */; };
 		17312CDA2017D380001B9BF4 /* HNTableViewStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */; };
 		17312CDB2017D380001B9BF4 /* HNTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD52017D380001B9BF4 /* HNTableViewSection.swift */; };
 		17312CDC2017D380001B9BF4 /* HNTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD62017D380001B9BF4 /* HNTableViewItem.swift */; };
-		17312CDD2017D380001B9BF4 /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD72017D380001B9BF4 /* NibReusable.swift */; };
+		17312CDD2017D380001B9BF4 /* HNNibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CD72017D380001B9BF4 /* HNNibReusable.swift */; };
 		17312CE12017D38E001B9BF4 /* HNTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CDE2017D38D001B9BF4 /* HNTableViewCell.swift */; };
-		17312CE22017D38E001B9BF4 /* UICollectionView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CDF2017D38D001B9BF4 /* UICollectionView+NibReusable.swift */; };
-		17312CE32017D38E001B9BF4 /* UITableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CE02017D38E001B9BF4 /* UITableView+NibReusable.swift */; };
+		17312CE22017D38E001B9BF4 /* UICollectionView+HNNibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CDF2017D38D001B9BF4 /* UICollectionView+HNNibReusable.swift */; };
+		17312CE32017D38E001B9BF4 /* UITableView+HNNibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CE02017D38E001B9BF4 /* UITableView+HNNibReusable.swift */; };
 		17312CE52017D398001B9BF4 /* HNTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */; };
 		17312CE92017EBCD001B9BF4 /* HNTableViewItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CE82017EBCD001B9BF4 /* HNTableViewItemBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +44,13 @@
 /* Begin PBXFileReference section */
 		1711FA43201E0A1900F9F1C0 /* HNTableViewItemBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewItemBuilderTests.swift; sourceTree = "<group>"; };
 		1711FA47201E0AA800F9F1C0 /* MockHNTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHNTableViewCell.swift; sourceTree = "<group>"; };
+		1711FA54201E1B6600F9F1C0 /* HNKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1711FA56201E1B6700F9F1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1711FA58201E1B6700F9F1C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1711FA5B201E1B6700F9F1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1711FA5D201E1B6700F9F1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1711FA60201E1B6700F9F1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1711FA62201E1B6700F9F1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171688F72014FB77009C713C /* HNKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HNKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171688FA2014FB77009C713C /* HNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNKit.h; sourceTree = "<group>"; };
 		171688FB2014FB77009C713C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,20 +58,27 @@
 		171689072014FB77009C713C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171689152014FC0A009C713C /* HNCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCardView.swift; sourceTree = "<group>"; };
 		171689172014FD2E009C713C /* HNHairlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNHairlineView.swift; sourceTree = "<group>"; };
-		17312CD22017D37F001B9BF4 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
-		17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueDisplaying.swift; sourceTree = "<group>"; };
+		17312CD22017D37F001B9BF4 /* HNNibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNNibLoadable.swift; sourceTree = "<group>"; };
+		17312CD32017D37F001B9BF4 /* HNValueDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNValueDisplaying.swift; sourceTree = "<group>"; };
 		17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewStructure.swift; sourceTree = "<group>"; };
 		17312CD52017D380001B9BF4 /* HNTableViewSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewSection.swift; sourceTree = "<group>"; };
 		17312CD62017D380001B9BF4 /* HNTableViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewItem.swift; sourceTree = "<group>"; };
-		17312CD72017D380001B9BF4 /* NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
+		17312CD72017D380001B9BF4 /* HNNibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNNibReusable.swift; sourceTree = "<group>"; };
 		17312CDE2017D38D001B9BF4 /* HNTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewCell.swift; sourceTree = "<group>"; };
-		17312CDF2017D38D001B9BF4 /* UICollectionView+NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+NibReusable.swift"; sourceTree = "<group>"; };
-		17312CE02017D38E001B9BF4 /* UITableView+NibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+NibReusable.swift"; sourceTree = "<group>"; };
+		17312CDF2017D38D001B9BF4 /* UICollectionView+HNNibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+HNNibReusable.swift"; sourceTree = "<group>"; };
+		17312CE02017D38E001B9BF4 /* UITableView+HNNibReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+HNNibReusable.swift"; sourceTree = "<group>"; };
 		17312CE42017D398001B9BF4 /* HNTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNTableViewDataSource.swift; sourceTree = "<group>"; };
 		17312CE82017EBCD001B9BF4 /* HNTableViewItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNTableViewItemBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1711FA51201E1B6600F9F1C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		171688F32014FB77009C713C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,10 +113,33 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		1711FA4F201E192D00F9F1C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17312CDF2017D38D001B9BF4 /* UICollectionView+HNNibReusable.swift */,
+				17312CE02017D38E001B9BF4 /* UITableView+HNNibReusable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1711FA55201E1B6700F9F1C0 /* HNKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1711FA56201E1B6700F9F1C0 /* AppDelegate.swift */,
+				1711FA58201E1B6700F9F1C0 /* ViewController.swift */,
+				1711FA5A201E1B6700F9F1C0 /* Main.storyboard */,
+				1711FA5D201E1B6700F9F1C0 /* Assets.xcassets */,
+				1711FA5F201E1B6700F9F1C0 /* LaunchScreen.storyboard */,
+				1711FA62201E1B6700F9F1C0 /* Info.plist */,
+			);
+			path = HNKitDemo;
+			sourceTree = "<group>";
+		};
 		171688ED2014FB77009C713C = {
 			isa = PBXGroup;
 			children = (
 				171688F92014FB77009C713C /* HNKit */,
+				1711FA55201E1B6700F9F1C0 /* HNKitDemo */,
 				171689042014FB77009C713C /* HNKitTests */,
 				171688F82014FB77009C713C /* Products */,
 			);
@@ -108,6 +150,7 @@
 			children = (
 				171688F72014FB77009C713C /* HNKit.framework */,
 				171689002014FB77009C713C /* HNKitTests.xctest */,
+				1711FA54201E1B6600F9F1C0 /* HNKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +158,7 @@
 		171688F92014FB77009C713C /* HNKit */ = {
 			isa = PBXGroup;
 			children = (
+				1711FA4F201E192D00F9F1C0 /* Extensions */,
 				17312CD12017D367001B9BF4 /* Model */,
 				171689142014FBFC009C713C /* Views */,
 				171688FA2014FB77009C713C /* HNKit.h */,
@@ -139,8 +183,6 @@
 				171689152014FC0A009C713C /* HNCardView.swift */,
 				171689172014FD2E009C713C /* HNHairlineView.swift */,
 				17312CDE2017D38D001B9BF4 /* HNTableViewCell.swift */,
-				17312CDF2017D38D001B9BF4 /* UICollectionView+NibReusable.swift */,
-				17312CE02017D38E001B9BF4 /* UITableView+NibReusable.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,9 +195,9 @@
 				17312CE82017EBCD001B9BF4 /* HNTableViewItemBuilder.swift */,
 				17312CD52017D380001B9BF4 /* HNTableViewSection.swift */,
 				17312CD42017D37F001B9BF4 /* HNTableViewStructure.swift */,
-				17312CD22017D37F001B9BF4 /* NibLoadable.swift */,
-				17312CD72017D380001B9BF4 /* NibReusable.swift */,
-				17312CD32017D37F001B9BF4 /* ValueDisplaying.swift */,
+				17312CD22017D37F001B9BF4 /* HNNibLoadable.swift */,
+				17312CD72017D380001B9BF4 /* HNNibReusable.swift */,
+				17312CD32017D37F001B9BF4 /* HNValueDisplaying.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +216,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1711FA53201E1B6600F9F1C0 /* HNKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1711FA63201E1B6700F9F1C0 /* Build configuration list for PBXNativeTarget "HNKitDemo" */;
+			buildPhases = (
+				1711FA50201E1B6600F9F1C0 /* Sources */,
+				1711FA51201E1B6600F9F1C0 /* Frameworks */,
+				1711FA52201E1B6600F9F1C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HNKitDemo;
+			productName = HNKitDemo;
+			productReference = 1711FA54201E1B6600F9F1C0 /* HNKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		171688F62014FB77009C713C /* HNKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1716890B2014FB77009C713C /* Build configuration list for PBXNativeTarget "HNKit" */;
@@ -220,6 +279,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Hundredeni;
 				TargetAttributes = {
+					1711FA53201E1B6600F9F1C0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					171688F62014FB77009C713C = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -237,6 +300,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 171688ED2014FB77009C713C;
 			productRefGroup = 171688F82014FB77009C713C /* Products */;
@@ -245,11 +309,22 @@
 			targets = (
 				171688F62014FB77009C713C /* HNKit */,
 				171688FF2014FB77009C713C /* HNKitTests */,
+				1711FA53201E1B6600F9F1C0 /* HNKitDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1711FA52201E1B6600F9F1C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1711FA61201E1B6700F9F1C0 /* LaunchScreen.storyboard in Resources */,
+				1711FA5E201E1B6700F9F1C0 /* Assets.xcassets in Resources */,
+				1711FA5C201E1B6700F9F1C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		171688F52014FB77009C713C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,21 +342,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1711FA50201E1B6600F9F1C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1711FA59201E1B6700F9F1C0 /* ViewController.swift in Sources */,
+				1711FA57201E1B6700F9F1C0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		171688F22014FB77009C713C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17312CDD2017D380001B9BF4 /* NibReusable.swift in Sources */,
-				17312CD82017D380001B9BF4 /* NibLoadable.swift in Sources */,
-				17312CE32017D38E001B9BF4 /* UITableView+NibReusable.swift in Sources */,
-				17312CD92017D380001B9BF4 /* ValueDisplaying.swift in Sources */,
+				17312CDD2017D380001B9BF4 /* HNNibReusable.swift in Sources */,
+				17312CD82017D380001B9BF4 /* HNNibLoadable.swift in Sources */,
+				17312CE32017D38E001B9BF4 /* UITableView+HNNibReusable.swift in Sources */,
+				17312CD92017D380001B9BF4 /* HNValueDisplaying.swift in Sources */,
 				171689182014FD2E009C713C /* HNHairlineView.swift in Sources */,
 				17312CDB2017D380001B9BF4 /* HNTableViewSection.swift in Sources */,
 				17312CE52017D398001B9BF4 /* HNTableViewDataSource.swift in Sources */,
 				171689162014FC0A009C713C /* HNCardView.swift in Sources */,
 				17312CDA2017D380001B9BF4 /* HNTableViewStructure.swift in Sources */,
 				17312CE92017EBCD001B9BF4 /* HNTableViewItemBuilder.swift in Sources */,
-				17312CE22017D38E001B9BF4 /* UICollectionView+NibReusable.swift in Sources */,
+				17312CE22017D38E001B9BF4 /* UICollectionView+HNNibReusable.swift in Sources */,
 				17312CDC2017D380001B9BF4 /* HNTableViewItem.swift in Sources */,
 				17312CE12017D38E001B9BF4 /* HNTableViewCell.swift in Sources */,
 			);
@@ -306,7 +390,56 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1711FA5A201E1B6700F9F1C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1711FA5B201E1B6700F9F1C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1711FA5F201E1B6700F9F1C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1711FA60201E1B6700F9F1C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		1711FA64201E1B6700F9F1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PS32KXRY8L;
+				INFOPLIST_FILE = HNKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hundredeni.HNKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1711FA65201E1B6700F9F1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PS32KXRY8L;
+				INFOPLIST_FILE = HNKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hundredeni.HNKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		171689092014FB77009C713C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -498,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1711FA63201E1B6700F9F1C0 /* Build configuration list for PBXNativeTarget "HNKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1711FA64201E1B6700F9F1C0 /* Debug */,
+				1711FA65201E1B6700F9F1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		171688F12014FB77009C713C /* Build configuration list for PBXProject "HNKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

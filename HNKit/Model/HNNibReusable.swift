@@ -1,5 +1,5 @@
 //
-//  NibReusable.swift
+//  HNNibReusable.swift
 //  HNKit
 //
 //  Created by Lasse Hammer Priebe on 23/01/2018.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol NibReusable: NibLoadable {
+protocol HNNibReusable: HNNibLoadable {
     static var nibReuseIdentifier: String { get }
 }
 
-extension NibReusable {
+extension HNNibReusable {
     
     static var nibReuseIdentifier: String {
         return String(describing: self)

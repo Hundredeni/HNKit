@@ -9,5 +9,10 @@
 import Foundation
 
 struct HNTableViewSection {
+    
     var items: [HNTableViewItem]
+    
+    init(items: [HNTableViewItem] = []) {
+        self.items = items
+    }
 }

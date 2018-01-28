@@ -1,5 +1,5 @@
 //
-//  ValueDisplaying.swift
+//  HNValueDisplaying.swift
 //  HNKit
 //
 //  Created by Lasse Hammer Priebe on 23/01/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ValueDispaying {
+protocol HNValueDispaying {
     func display(value: Any?)
 }

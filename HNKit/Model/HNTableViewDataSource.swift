@@ -12,20 +12,10 @@ class HNTableViewDataSource: NSObject {
     
     fileprivate var registeredReuseIdentifiers: Set<String> = []
     
-    fileprivate(set) var tableViewStructure: HNTableViewStructure?
+    var tableViewStructure: HNTableViewStructure
     
-    init(tableViewStructure: HNTableViewStructure?) {
+    init(tableViewStructure: HNTableViewStructure = HNTableViewStructure()) {
         self.tableViewStructure = tableViewStructure
-    }
-    
-    func tableViewItem(at indexPath: IndexPath) -> HNTableViewItem? {
-        guard
-            let tableViewStructure = tableViewStructure,
-            tableViewStructure.containsItem(at: indexPath)
-        else {
-            return nil
-        }
-        return tableViewStructure[indexPath]
     }
 }
 
@@ -34,27 +24,24 @@ class HNTableViewDataSource: NSObject {
 extension HNTableViewDataSource: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        guard let tableViewStructure = tableViewStructure else {
-            return 0
-        }
         return tableViewStructure.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let tableViewStructure = tableViewStructure else {
-            return 0
-        }
         return tableViewStructure.sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = tableViewItem(at: indexPath)!
+        guard tableViewStructure.containsItem(at: indexPath) else {
+            return UITableViewCell()
+        }
+        let item = tableViewStructure[indexPath]
         if !registeredReuseIdentifiers.contains(item.type.nibReuseIdentifier) {
             tableView.register(reusableType: item.type)
             registeredReuseIdentifiers.insert(item.type.nibReuseIdentifier)
         }
         let cell = tableView.dequeue(reusableType: item.type, for: indexPath)!
-        if let valueDisplayingCell = cell as? ValueDispaying {
+        if let valueDisplayingCell = cell as? HNValueDispaying {
             valueDisplayingCell.display(value: item.value)
         }
         item.configuration?(cell)

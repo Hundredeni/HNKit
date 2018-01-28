@@ -1,5 +1,5 @@
 //
-//  UITableView+NibReusable.swift
+//  UITableView+HNNibReusable.swift
 //  HNKit
 //
 //  Created by Lasse Hammer Priebe on 23/01/2018.
@@ -10,11 +10,11 @@ import UIKit
 
 extension UITableView {
     
-    func register<T: UITableViewCell & NibReusable>(reusableType: T.Type) {
+    func register<T: UITableViewCell & HNNibReusable>(reusableType: T.Type) {
         register(reusableType.nib, forCellReuseIdentifier: reusableType.nibReuseIdentifier)
     }
     
-    func dequeue<T: UITableViewCell & NibReusable>(reusableType: T.Type, for indexPath: IndexPath) -> T? {
+    func dequeue<T: UITableViewCell & HNNibReusable>(reusableType: T.Type, for indexPath: IndexPath) -> T? {
         return dequeueReusableCell(withIdentifier: reusableType.nibReuseIdentifier, for: indexPath) as? T
     }
 }
