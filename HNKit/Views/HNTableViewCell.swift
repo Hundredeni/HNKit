@@ -8,4 +8,4 @@
 
 import UIKit
 
-class HNTableViewCell: UITableViewCell, HNNibReusable { }
+open class HNTableViewCell: UITableViewCell, HNNibReusable { }

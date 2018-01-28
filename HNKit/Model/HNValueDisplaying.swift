@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HNValueDispaying {
+public protocol HNValueDispaying {
     func display(value: Any?)
 }

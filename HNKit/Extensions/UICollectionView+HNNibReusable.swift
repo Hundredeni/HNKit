@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UICollectionView {
+public extension UICollectionView {
     
     func register<T: UICollectionViewCell & HNNibReusable>(reusableType: T.Type) {
         register(reusableType.nib, forCellWithReuseIdentifier: reusableType.nibReuseIdentifier)

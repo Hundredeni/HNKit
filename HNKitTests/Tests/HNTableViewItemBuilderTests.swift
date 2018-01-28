@@ -33,6 +33,17 @@ class HNTableViewItemBuilderTests: XCTestCase {
         XCTAssertEqual(resultValue!, testValue)
     }
     
+    func testInit_identifierProvided_sameIdentifierIncludedInBuild() {
+        
+        let testIdentifier = "test"
+        
+        let builder = HNTableViewItemBuilder(type: HNTableViewCell.self, value: nil, identifier: testIdentifier)
+        let item = builder.build()
+        
+        XCTAssertNotNil(item.identifier)
+        XCTAssertEqual(item.identifier!, testIdentifier)
+    }
+    
     func testInit_configurationProvided_sameConfigurationIncludedInBuild() {
         
         let testTagValue = 1
@@ -41,7 +52,7 @@ class HNTableViewItemBuilderTests: XCTestCase {
         }
         let testTableViewCell = HNTableViewCell()
         
-        let builder = HNTableViewItemBuilder(type: HNTableViewCell.self, value: nil, configuration: testConfiguration)
+        let builder = HNTableViewItemBuilder(type: HNTableViewCell.self, value: nil, identifier: nil, configuration: testConfiguration)
         let item = builder.build()
         
         XCTAssertNotNil(item.configuration)
@@ -60,6 +71,18 @@ class HNTableViewItemBuilderTests: XCTestCase {
         let resultValue = item.value as? Int
         XCTAssertNotNil(resultValue)
         XCTAssertEqual(resultValue!, testValue)
+    }
+    
+    func testSetIdentifier_identifierSet_sameIdentifierIncludedInBuild() {
+        
+        let testIdentifier = "test"
+        
+        let builder = HNTableViewItemBuilder(type: HNTableViewCell.self)
+        builder.set(identifier: testIdentifier)
+        let item = builder.build()
+        
+        XCTAssertNotNil(item.identifier)
+        XCTAssertEqual(item.identifier!, testIdentifier)
     }
     
     func testSetConfiguration_configurationSet_sameConfigurationIncludedInBuild() {

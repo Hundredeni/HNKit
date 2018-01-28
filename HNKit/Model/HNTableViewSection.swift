@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct HNTableViewSection {
+public struct HNTableViewSection {
     
-    var items: [HNTableViewItem]
+    public var items: [HNTableViewItem]
     
-    init(items: [HNTableViewItem] = []) {
+    public init(items: [HNTableViewItem] = []) {
         self.items = items
     }
 }

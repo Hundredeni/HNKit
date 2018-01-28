@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol HNNibReusable: HNNibLoadable {
+public protocol HNNibReusable: HNNibLoadable {
     static var nibReuseIdentifier: String { get }
 }
 
-extension HNNibReusable {
+public extension HNNibReusable {
     
     static var nibReuseIdentifier: String {
         return String(describing: self)

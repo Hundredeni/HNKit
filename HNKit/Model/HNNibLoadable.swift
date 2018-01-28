@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol HNNibLoadable {
+public protocol HNNibLoadable {
     static var nibName: String { get }
     static var nib: UINib { get }
 }
 
-extension HNNibLoadable {
+public extension HNNibLoadable {
     
     static var nibName: String {
         return String(describing: self)
@@ -24,7 +24,7 @@ extension HNNibLoadable {
     }
 }
 
-extension HNNibLoadable where Self: UIView {
+public extension HNNibLoadable where Self: UIView {
     
     static func fromNib() -> Self {
         return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)![0] as! Self

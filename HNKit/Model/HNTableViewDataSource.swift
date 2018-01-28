@@ -8,13 +8,13 @@
 
 import UIKit
 
-class HNTableViewDataSource: NSObject {
+open class HNTableViewDataSource: NSObject {
     
     fileprivate var registeredReuseIdentifiers: Set<String> = []
     
-    var tableViewStructure: HNTableViewStructure
+    public var tableViewStructure: HNTableViewStructure
     
-    init(tableViewStructure: HNTableViewStructure = HNTableViewStructure()) {
+    public init(tableViewStructure: HNTableViewStructure = HNTableViewStructure()) {
         self.tableViewStructure = tableViewStructure
     }
 }
@@ -23,15 +23,15 @@ class HNTableViewDataSource: NSObject {
 
 extension HNTableViewDataSource: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewStructure.sections.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewStructure.sections[section].items.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard tableViewStructure.containsItem(at: indexPath) else {
             return UITableViewCell()
         }
@@ -46,5 +46,9 @@ extension HNTableViewDataSource: UITableViewDataSource {
         }
         item.configuration?(cell)
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        tableViewStructure.moveItem(from: sourceIndexPath, to: destinationIndexPath)
     }
 }

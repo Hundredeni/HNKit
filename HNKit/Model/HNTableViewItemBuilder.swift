@@ -8,42 +8,51 @@
 
 import UIKit
 
-class HNTableViewItemBuilder {
+open class HNTableViewItemBuilder {
     
     fileprivate var type: HNTableViewCell.Type
     fileprivate var value: Any?
+    fileprivate var identifier: String?
     fileprivate var configuration: ((HNTableViewCell) -> Void)?
     
-    init(item: HNTableViewItem) {
+    public init(item: HNTableViewItem) {
         type = item.type
         value = item.value
+        identifier = item.identifier
         configuration = item.configuration
     }
     
-    init(type: HNTableViewCell.Type, value: Any? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
+    public init(type: HNTableViewCell.Type, value: Any? = nil, identifier: String? = nil, configuration: ((HNTableViewCell) -> Void)? = nil) {
         self.type = type
         self.value = value
+        self.identifier = identifier
         self.configuration = configuration
     }
     
-    func build() -> HNTableViewItem {
-        return HNTableViewItem(type: type, value: value, configuration: configuration)
+    open func build() -> HNTableViewItem {
+        return HNTableViewItem(type: type, value: value, identifier: identifier, configuration: configuration)
     }
     
     @discardableResult
-    func set(value: Any?) -> HNTableViewItemBuilder {
+    public func set(value: Any?) -> HNTableViewItemBuilder {
         self.value = value
         return self
     }
     
     @discardableResult
-    func set(configuration: ((HNTableViewCell) -> Void)?) -> HNTableViewItemBuilder {
+    public func set(identifier: String?) -> HNTableViewItemBuilder {
+        self.identifier = identifier
+        return self
+    }
+    
+    @discardableResult
+    public func set(configuration: ((HNTableViewCell) -> Void)?) -> HNTableViewItemBuilder {
         self.configuration = configuration
         return self
     }
     
     @discardableResult
-    func set(accessoryType: UITableViewCellAccessoryType) -> HNTableViewItemBuilder {
+    public func set(accessoryType: UITableViewCellAccessoryType) -> HNTableViewItemBuilder {
         updateOrSetConfiguration { tableViewCell in
             tableViewCell.accessoryType = accessoryType
         }
